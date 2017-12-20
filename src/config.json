@@ -1,0 +1,9 @@
+{
+  "feedEndpoint": "https://www.reddit.com/r/analog/top/.json",
+  "firebase": {
+    "apiKey": "AIzaSyAt3IhB56Sr1BuOT2_HoQPnONaL7q24JsQ",
+    "authDomain": "feedcraft-5f90c.firebaseapp.com",
+    "databaseURL": "https://feedcraft-5f90c.firebaseio.com",
+    "storageBucket": ""
+  }
+}

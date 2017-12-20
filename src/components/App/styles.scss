@@ -1,0 +1,18 @@
+@import '../../shared-styles/index';
+
+.app {
+  font-family: $body-font;
+  padding: 2em;
+
+  * {
+    outline: none;
+    box-sizing: border-box;
+    user-select: none;
+  }
+}
+
+.body {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 3em 0;
+}

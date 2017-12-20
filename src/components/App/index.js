@@ -4,14 +4,14 @@ import { Provider } from 'react-redux'
 import store from '../../redux/configureStore'
 import styles from './styles.scss'
 
-import RouteMonitor from '../RouteMonitor'
+import ScrollToTop from '../ScrollToTop'
 import Home from '../Feed'
 import Favorites from '../Favorites'
 import Nav from '../Nav'
 
 const App = () =>
   <Provider store={store}>
-    <RouteMonitor>
+    <ScrollToTop>
       <main className={styles.app}>
         <Nav />
         <div className={styles.body}>
@@ -19,7 +19,7 @@ const App = () =>
           <Route exact path="/favorites" component={Favorites} />
         </div>
       </main>
-    </RouteMonitor>
+    </ScrollToTop>
   </Provider>
 
 export default App

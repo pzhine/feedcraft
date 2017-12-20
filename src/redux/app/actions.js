@@ -20,9 +20,8 @@ export default {
           innerError: err,
         }
       }
-      setTimeout(() => dispatch({ type: 'SHUFFLE_CARDS' }), 200)
       return dispatch({
-        type: 'RECEIVE_CONFIG',
+        type: 'RECEIVE_FEED',
         payload,
       })
     }

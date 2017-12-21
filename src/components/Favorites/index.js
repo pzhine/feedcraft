@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import Item from './Item'
 import Post from '../Post'
 import styles from './styles.scss'
 
@@ -12,7 +13,9 @@ const Favorites = ({ favorites }) =>
     {favorites.isLoaded &&
       !favorites.isEmpty &&
       Object.keys(favorites.dict).map(key =>
-        <Post key={key} id={key} data={favorites.dict[key]} isFavorite />
+        <Item key={favorites.dict[key].id} id={favorites.dict[key].id}>
+          <Post data={favorites.dict[key]} />
+        </Item>
       )}
   </div>
 

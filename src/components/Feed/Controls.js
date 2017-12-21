@@ -7,12 +7,11 @@ import styles from './styles.scss'
 const Controls = ({ id, data, addFavorite, favorites }) => {
   const isFavorite = favorites.isLoaded && !favorites.isEmpty && favorites.dict[id]
   return (
-    <button
-      className={cx({ [styles.isFavorite]: isFavorite })}
-      onClick={() => addFavorite({ id, data })}
-    >
-      <i className={cx(styles.fas, styles['fa-heart'])} />
-    </button>
+    <div className={cx(styles.buttonContainer, { [styles.isFavorite]: isFavorite })}>
+      <button onClick={() => addFavorite({ id, data })}>
+        <i className={cx(styles.fas, styles['fa-heart'])} />
+      </button>
+    </div>
   )
 }
 

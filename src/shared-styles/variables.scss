@@ -21,4 +21,5 @@ $color-text-light: #999;
 
 /* transitions */
 $transition-quick: 100ms linear;
-$transition-med: 300ms linear;
+$transition-med: 300ms ease-in-out;
+$transition-slow: 3000ms ease-in-out;

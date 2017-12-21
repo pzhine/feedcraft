@@ -1,7 +1,29 @@
 @import '../../shared-styles/index';
 
-.isFavorite {
+.buttonContainer {
+  position: relative;
+  overflow: visible;
+  width: 2em;
+
+  button {
+    position: absolute;
+  }
+
   i {
-    color: $color-red;
+    transition: color $transition-med;
+  }
+
+  &.isFavorite {
+    transform: translateX(0);
+    width: 100%;
+
+    button {
+      right: 0;
+    }
+
+    i {
+      color: $color-red;
+      text-shadow: none;
+    }
   }
 }

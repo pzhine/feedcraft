@@ -5,8 +5,11 @@ import moment from 'moment'
 import actions from '../../store/favorites/actions'
 import styles from './styles.scss'
 
-const Post = ({ data }) =>
+const Post = ({ data, id, renderControls }) =>
   <article className={styles.post}>
+    <div className={styles.controls}>
+      {renderControls({ data, id })}
+    </div>
     <div className={styles.photo} style={{ backgroundImage: `url(${data.url})` }} />
     <div className={styles.title}>
       {data.title}

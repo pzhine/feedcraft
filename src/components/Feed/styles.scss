@@ -1,13 +1,7 @@
 @import '../../shared-styles/index';
 
-.feed {
-
-}
-
-.controls {
-  &.isFavorite {
-    i {
-      color: $color-red;
-    }
+.isFavorite {
+  i {
+    color: $color-red;
   }
 }

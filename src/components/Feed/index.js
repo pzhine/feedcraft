@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import actions from '../../redux/app/actions'
+import actions from '../../store/app/actions'
 import Post from '../Post'
 import styles from './styles.scss'
 
@@ -13,7 +13,9 @@ class Feed extends Component {
     return (
       <section className={styles.feed}>
         {app.feed
-          ? app.feed.data.children.map(post => <Post key={post.data.id} data={post.data} />)
+          ? app.feed.data.children.map(post =>
+              <Post key={post.data.id} data={post.data} id={post.data.id} />
+            )
           : <div className={styles.loading}>loading...</div>}
       </section>
     )

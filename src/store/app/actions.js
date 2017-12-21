@@ -5,9 +5,6 @@ export default {
   fetchFeed() {
     const { feedEndpoint } = config
     return async dispatch => {
-      dispatch({
-        type: 'FETCH_FEED',
-      })
       const payload = {
         feed: null,
         error: null,
@@ -21,7 +18,7 @@ export default {
         }
       }
       return dispatch({
-        type: 'RECEIVE_FEED',
+        type: 'FEED_RECEIVED',
         payload,
       })
     }

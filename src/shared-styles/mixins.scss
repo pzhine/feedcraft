@@ -3,3 +3,9 @@
   flex-direction: column;
   justify-content: center;
 }
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width + 1}) {
+    @content;
+  }
+}

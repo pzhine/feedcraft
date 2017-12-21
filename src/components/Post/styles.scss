@@ -1,16 +1,14 @@
 @import '../../shared-styles/index';
 
+@include desktop {
+  @import './desktop'
+}
+
 .post {
   width: 100%;
   box-shadow: 0 0 6px $color-border-darker;
   margin-bottom: 50px;
   position: relative;
-
-  &:hover {
-    .controls > * {
-      transform: translateX(0);
-    }
-  }
 }
 
 .photo {
@@ -79,7 +77,6 @@
   }
 
   > * {
-    transform: translateX(-100px);
     transition: all $transition-med;
   }
 

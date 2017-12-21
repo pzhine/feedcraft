@@ -1,0 +1,9 @@
+.post:hover {
+  .controls > * {
+    transform: translateX(0);
+  }
+}
+
+.controls > * {
+  transform: translateX(-100px);
+}

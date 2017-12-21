@@ -10,18 +10,27 @@ const Post = ({ data, id, renderControls }) =>
     <div className={styles.controls}>
       {renderControls({ data, id })}
     </div>
-    <div className={styles.photo} style={{ backgroundImage: `url(${data.url})` }} />
+    <a href={data.url} target="_blank">
+      <div
+        className={styles.photo}
+        style={{ backgroundImage: `url(${data.preview.images[0].source.url})` }}
+      />
+    </a>
     <div className={styles.title}>
-      {data.title}
+      <a href={data.url} target="_blank">
+        {data.title}
+      </a>
     </div>
     <div className={styles.stats}>
       <span>
         <i className={cx(styles.fas, styles['fa-user'])} />
-        u/{data.author}
+        <a href={`https://reddit.com/u/${data.author}`} target="_blank">
+          u/{data.author}
+        </a>
       </span>
       <span>
         <i className={cx(styles.fa, styles['fa-clock'])} />
-        {moment.utc(data.created_utc).fromNow()}
+        {moment.unix(data.created_utc).utcOffset(new Date().getTimezoneOffset()).fromNow()}
       </span>
       <span>
         <i className={cx(styles.fas, styles['fa-bolt'])} />

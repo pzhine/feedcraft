@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import actions from '../../store/app/actions'
 import Post from '../Post'
 import Controls from './Controls'
+import MessagePanel from '../MessagePanel'
 import styles from './styles.scss'
 
 class Feed extends Component {
@@ -22,7 +23,7 @@ class Feed extends Component {
                 renderControls={props => <Controls {...props} />}
               />
             )
-          : <div className={styles.loading}>loading...</div>}
+          : <MessagePanel>Loading...</MessagePanel>}
       </section>
     )
   }

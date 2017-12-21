@@ -12,11 +12,13 @@
   button {
     background: transparent;
     border: none;
+    pointer-events: all;
+    cursor: pointer;
   }
 }
 
 .body {
   max-width: $content-width;
   margin: 0 auto;
-  padding: 3em 0;
+  padding: 75px 0;
 }

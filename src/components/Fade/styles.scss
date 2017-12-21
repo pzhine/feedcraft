@@ -1,0 +1,14 @@
+@import '../../shared-styles/index';
+
+.fade {
+  transition: all $transition-med;
+
+  &.entering, &.exited, &.exiting {
+    margin-bottom: -110%;
+    opacity: 0;
+  }
+  &.entered {
+    margin-bottom: 0;
+    opacity: 1
+  }
+}

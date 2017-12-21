@@ -17,7 +17,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <ScrollToTop>
+        <ScrollToTop paths={['/favorites']}>
           <main className={styles.app}>
             <Nav />
             <div className={styles.body}>

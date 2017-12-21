@@ -1,0 +1,10 @@
+@import '../../shared-styles/index';
+
+.messagePanel {
+  background: $color-message-panel;
+  padding: 26px;
+  text-align: center;
+  font: $nav-font;
+  color: $color-text-dark;
+  width: 100%;
+}

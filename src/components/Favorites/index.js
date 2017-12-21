@@ -1,25 +1,33 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { TransitionGroup } from 'react-transition-group'
 import Controls from './Controls'
 import Post from '../Post'
-import styles from './styles.scss'
+import MessagePanel from '../MessagePanel'
+import Fade from '../Fade'
 
 const Favorites = ({ favorites }) =>
-  <div className={styles.favorites}>
-    {!favorites.isLoaded && <div className={styles.loading}>Loading...</div>}
+  <TransitionGroup appear={false}>
+    {!favorites.isLoaded &&
+      <Fade>
+        <MessagePanel>Loading...</MessagePanel>
+      </Fade>}
     {favorites.isLoaded &&
       favorites.isEmpty &&
-      <div className={styles.empty}>No favorites yet</div>}
+      <Fade>
+        <MessagePanel>No favorites yet.</MessagePanel>
+      </Fade>}
     {favorites.isLoaded &&
       !favorites.isEmpty &&
       Object.keys(favorites.dict).map(key =>
-        <Post
-          data={favorites.dict[key]}
-          key={favorites.dict[key].id}
-          id={favorites.dict[key].id}
-          renderControls={props => <Controls {...props} />}
-        />
+        <Fade key={favorites.dict[key].id}>
+          <Post
+            data={favorites.dict[key]}
+            id={favorites.dict[key].id}
+            renderControls={props => <Controls {...props} />}
+          />
+        </Fade>
       )}
-  </div>
+  </TransitionGroup>
 
 export default connect(state => state)(Favorites)

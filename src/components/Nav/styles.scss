@@ -2,4 +2,44 @@
 
 .nav {
   position: fixed;
+  width: 100%;
+  border-bottom: 1px solid $color-border;
+  height: 40px;
+  display: flex;
+  background: rgba(255,255,255,0.7);
+}
+
+.bar {
+  max-width: 768px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+
+  a {
+    text-decoration: none;
+    padding: 0 1em;
+    background: transparent;
+    color: $color-blue;
+    transition: all $transition-med;
+    @include center-vertical;
+
+    &:first-of-type {
+      border-left: 1px solid $color-border;
+    }
+
+    &.isActive {
+      background: $color-blue;
+      color: $color-white;
+      border: none;
+    }
+
+    .content {
+      white-space: nowrap;
+    }
+
+    i {
+      margin-right: 0.1em;
+    }
+  }
 }

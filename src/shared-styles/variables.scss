@@ -1,3 +1,24 @@
+/* dimensions */
 $content-width: 500px;
-$body-font: 'Arvo', serif;
-$color-red: red;
+$photo-height: 350px;
+
+/* fonts */
+$body-font-family: 'Arvo', serif;
+$nav-font-family: 'Helvetica', sans-serif;
+$nav-font: 16px $nav-font-family;
+$title-font: 16px/24px $body-font-family;
+$stats-font: 12px $nav-font-family;
+$icon-font-solid: 900 12px 'Font Awesome 5 Free';
+
+/* colors */
+$color-border: #e1e1e1;
+$color-border-darker: #838889;
+$color-blue: #57a2e4;
+$color-white: #fff;
+$color-red: #f5857e;
+$color-text-dark: #000;
+$color-text-light: #999;
+
+/* transitions */
+$transition-quick: 100ms linear;
+$transition-med: 300ms linear;
